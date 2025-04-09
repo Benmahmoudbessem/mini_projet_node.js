@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f2f4f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .login-card {
+      max-width: 400px;
+      width: 100%;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 1rem;
+      box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .form-control {
+      border-radius: 0.5rem;
+    }
+    .btn-primary {
+      width: 100%;
+      border-radius: 0.5rem;
+    }
+    .link-register {
+      display: block;
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .login-card img {
+      max-width: 150px;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-card">
+    <!-- Image du haut -->
+    <img src="/images/bien.jpg" alt="Mon Logo">
+
+    <h3 class="mb-4">🔐 Connexion</h3>
+    <form method="POST" action="/login">
+      <div class="mb-3">
+        <label for="username" class="form-label">Nom d'utilisateur</label>
+        <input type="text" class="form-control" name="username" id="username" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Mot de passe</label>
+        <input type="password" class="form-control" name="password" id="password" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Se connecter</button>
+    </form>
+    <a class="link-register" href="/register">Créer un compte</a>
+  </div>
+
+</body>
+</html>
